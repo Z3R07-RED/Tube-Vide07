@@ -16,7 +16,8 @@ apt-get install wget
 ```python
 pip install youtube-dl
 ```
-INSTALL:
+
+INSTALL IN TERMUX:
 ======
 * cd Tube-Vide07/
 * chmod +x install.sh
