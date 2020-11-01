@@ -1,8 +1,8 @@
 #                      Tube-Vide07
 
-###Author: Z3R07-RED
-###Version: 1.0
-###Date: Oct 14 2020
+Author: Z3R07-RED
+Version: 1.0
+Date: Oct 14 2020
 
 Download videos from facebook, instagram, youtube and more.
 
@@ -27,5 +27,6 @@ USAGE:
 
 * search for a video and hit the share with ... button then select termux.
 
-####NOTE
+NOTE:
+======
 *Configure file: ~/.netrc
