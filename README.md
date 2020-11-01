@@ -19,9 +19,12 @@ pip install youtube-dl
 
 INSTALL IN TERMUX:
 ======
-* cd Tube-Vide07/
-* chmod +x install.sh
-* ./install.sh
+```bash
+git clone https://github.com/Z3R07-RED/Tube-Vide07.git
+cd Tube-Vide07/
+chmod +x install.sh
+./install.sh
+```
 
 USAGE:
 ======
