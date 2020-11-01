@@ -1,0 +1,55 @@
+#!/data/data/com.termux/files/usr/bin/bash
+#Coded by Z3R07-RED on Oct 14 2020
+
+echo -e "\e[1;37mTube-Vide07\e[0m"
+echo -e "\e[1;37m-----------\e[0m"
+echo -e "\nCopyright 2020 by Z3R07-RED"
+echo ""
+echo "┌───────────────────────────┐"
+echo "│ For audio only  press [1] │"
+echo "│ For video mp4   press [2] │"
+echo "│ For video 360p  press [3] │"
+echo "│ For video 480p  press [4] │"
+echo "│ For video 720p  press [5] │"
+echo "│ For video 1080p press [6] │"
+echo "└───────────────────────────┘"
+
+if [[ ! -d ~/storage/shared/TubeVideo ]]; then
+    mkdir ~/storage/shared/TubeVideo
+fi
+
+command='-no-mtime -o /data/data/com.termux/files/home/storage/shared/TubeVideo/%(title)s.%(ext)s -f'
+read -p $'\n[OPTION] ➤ ' option
+
+echo -e "\nDownloading to directory: ~/storage/shared/TubeVideo"
+
+if [ "$option" -eq "1" ]
+then
+    echo "$command 140" > ~/.config/youtube-dl/config
+    youtube-dl $1
+
+elif [ "$option" -eq "2" ]
+then
+    echo "$command \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\" " > ~/.config/youtube-dl/config
+    youtube-dl $1
+
+elif [ "$option" -eq "3" ]
+then
+    echo "$command \"best[height<=360]\"" > ~/.config/youtube-dl/config
+    youtube-dl $1
+
+elif [ "$option" -eq "4" ]
+then
+    echo "$command \"best[height<=480]\"" > ~/.config/youtube-dl/config
+    youtube-dl $1
+
+elif [ "$option" -eq "5" ]
+then
+    echo "$command \"best[height<=720]\"" > ~/.config/youtube-dl/config
+    youtube-dl $1
+
+elif [ "$option" -eq "6" ]
+then
+    echo "$command \"best[height<=1080]\"" > ~/.config/youtube-dl/config
+    youtube-dl $1
+fi
